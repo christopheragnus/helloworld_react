@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './HelloWorldList.css';
 import HelloWorld from './HelloWorld';
+import AddGreeter from './AddGreeter';
 
 class HelloWorldList extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class HelloWorldList extends Component {
       }
 
     // HelperFunction
-    
+
     renderGreetings() {
         return this.state.greetings.map(name => (
             <HelloWorld key={name} name={name}/>
@@ -19,7 +20,8 @@ class HelloWorldList extends Component {
     render() {
       return (
         <div className="HelloWorldList">
-          {this.renderGreetings()}
+        <AddGreeter />
+        {this.renderGreetings()}
         </div>
       );
     }
